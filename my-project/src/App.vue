@@ -1,23 +1,31 @@
 
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-    <helllo></hello>
+    <h1>{{title}}</h1>
   </div>
 </template>
 
 <script>
 import Hello from './components/Hello'
 export default {
-  name: 'app',
-  components:{
-      Hello
+  data : function(){
+    return{
+      title:'this is a todo list'
+    }
   }
 }
 </script>
 
 <style>
+html{
+height :100%;
+}
+body{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
